@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+</head>
+
+<body>
+  <section>
+    <ul>
+    <% @events.each do |e| %>
+    <% if e.allday? %>
+      <li>
+        <strong><%= e.summary %></strong> <br><span><%= e.dtstart %> //&ndash;// <%= e.dtend %></span>
+      </li>
+    <% end %>
+    <% end %>
+    </ul>
+  </section>
+</body>

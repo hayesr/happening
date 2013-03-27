@@ -1,0 +1,114 @@
+@import 'grid';
+.generate-grid();
+
+nav{
+    ul{
+        li{
+            float: left;
+            a{
+                border: none;
+                border-right: 1px solid fade(@blue-link, 10%);
+            }
+        }
+    }
+}
+
+nav#site_nav{
+    // Nav buttonized for mobile
+    // mega-dropdown with 3 columns and headings
+    .submenu{
+        //display: block;
+    }
+}
+
+section.banner{
+    background-color: fade(@type, 20%);
+    img{
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+}
+
+section.features{
+    .feature{
+        padding-right: 1em;
+        border-right: 1px solid fade(@type, 10%);
+    }
+    .columns:last-child{
+        .feature{
+            border: none;
+        }
+    }
+}
+
+section.gallery{
+    display: block;
+    .clearfix;
+    ul{
+        li{
+            width: 20%;
+            float: left;
+            background: none;
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        li:nth-child(even){
+            background: none;
+        }
+    }
+}
+section.form{
+    background-color: lighten(@type, 65%);
+    padding: 2em 0;
+    
+    form{
+        padding: 2em;
+        background-color: #fff;
+        .box-shadow(0 2px 2px rgba(0,0,0,0.2));
+        
+    }
+}
+
+section.icons{
+    ul{
+        list-style:none;
+        padding: 0;
+        margin: 0 auto;
+        border:1px solid @type;
+        .clearfix;
+        li{
+            float: left;
+            width: 5%;
+            text-align: center;
+            .entypo{
+                color: #000;
+                font-family: "Entypo";
+                font-size: 64px;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+ul.columns{
+    padding: 0;
+    margin:0 0 0 4.4%;
+    border-left: none;
+    // list-style: none;
+    li{
+        // border-left: 1px solid fade(@type, 6%);
+        // padding-left: 1em;
+    }
+}
+
+article{
+    aside{
+        padding-left: 2em;
+    }
+}
+
+.sidebar{
+    color: lighten(@type, 20%);
+}

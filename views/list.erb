@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+</head>
+
+<body>
+  <section>
+    <ul>
+    <% @current_events.each do |event| %>
+    <li class="group">
+			<div class="vevent">
+				<div class="date">
+					<abbr class="dtstart" title="<%= event.dtstart.strftime('%Y-%m-%d') %>">
+						<span class="month"><%= event.dtstart.strftime('%b') %></span> 
+						<span class="day"><%= event.dtstart.strftime('%d') %></span>
+					</abbr>
+					<% if event.dtend - event.dtstart > 1 %>
+					<span class="separator">&ndash;</span>
+					<abbr class="dtend" title="<%= event.dtend.strftime('%Y-%m-%d') %>">
+						<span class="month"><%= event.dtend.strftime('%b') %></span> 
+						<span class="day"><%= event.dtend.day - 1 %></span>
+					</abbr>
+					<% end %>
+				</div>
+				<div class="info">
+					
+					<% if event.description %>
+					<span class="summary" data-content="<%= event.description.gsub(/\n/, "<br>") %>">
+					  <%= event.summary %>
+					</span>
+					<span class="description">
+					 <%= event.description.gsub(/\n/, "<br>") %>
+					</span>
+					<% else %>
+					<span class="summary"><%= event.summary %></span> 
+					<% end %>
+				</div>
+			</div>
+		</li>
+    <% end %>
+    </ul>
+  </section>
+</body>

@@ -1,0 +1,216 @@
+
+// @import 'open-sans';
+// @import 'entypo';
+
+
+html{
+    font-size: 13px;
+}
+
+body{
+    font-size: 13px;
+    //font-family: 'UbuntuRegular', "Helvetica Neue", Arial, sans-serif;
+    font-family: "Lucida Grande", Tahoma, sans-serif;
+    line-height: 1.8;
+    min-height: 100%;
+    color: #444;
+    //background: url('i/grid.png') top center;
+}
+
+p{
+    margin: 0 0 13px 0;
+}
+
+h1,h2,h3,h4,h5,h6{ 
+    font-weight: normal; 
+    text-rendering: optimizeLegibility;
+}
+
+h1{	font-size: 34px; line-height: 1.4; }
+
+h2{	font-size: 26px; line-height: 1.4; }
+
+h3{	font-size: 21px; line-height: 1.4; }
+
+h4{	font-size: 16px; }
+
+h5{	font-size: 13px; }
+
+h6{	font-size: 10px; }
+
+header{
+    hgroup{
+        h1{
+            margin:0;
+        }
+        h2{
+            margin: 0 0 16px 0;
+        }
+    }
+}
+
+section{
+    margin-bottom: 2em;
+}
+
+menu{
+    padding: 0;
+    margin: 0;
+    ul{
+        li{
+            a{
+                display: block;
+                border: none;
+            }
+        }
+    }
+}
+
+article{
+    font-size: 16px;
+    h2{
+        margin-bottom: 16px;
+    }
+    aside{
+        font-size: 13px;
+        color: lighten(@type, 15%);
+        font-style: italic;
+        padding-left: 1em;
+        margin-bottom: 16px;
+    }
+    footer{
+        font-size: 13px;
+        color: lighten(@type, 20%);
+    }
+}
+
+ol,ul{
+    color: lighten(@type, 10%);
+    margin-bottom: 1.3125em;
+    border-left: 1px solid fadeout(@type, 90%);
+    min-height: 1em;
+    li{
+        margin:0 0 0 0;
+        padding: 0.5em 3px;
+        //line-height: 1.4;
+    }
+    li:nth-child(even){
+        background-color: fadeout(@type, 97%);
+    }
+}
+
+table {
+	margin: 0;
+	padding: 0;
+	th, td{
+	    padding: 10px 20px;
+    	text-align: left;
+    	//border-bottom: 1px solid #ccc;
+    	border-bottom: 1px solid lighten(@type, 55%);
+	}
+	th{
+	    border-width: 2px;
+	}
+	td{
+	    color: #666;
+	}
+	tr:last-child{
+	    th, td{
+	        border-bottom: none;
+	    }
+	}
+	tr:nth-child(even){
+	    background: mix(@type, #fff, 8%);
+	}
+}
+
+article table{
+    font-size: 13px;
+}
+
+form{
+    fieldset{
+    	padding: 1em 0;
+    	//margin: 0 0 2em 0;
+    	font-size: 16px;
+    	&.form-actions{
+    	    margin: 0;
+    	}
+    	label{
+    	    display: block;
+        	margin: 0 0 5px 0;
+        	font-weight: bold;
+    	}
+    	&.check{
+    	    label{
+    	        display: inline;
+            	font-weight: normal;
+    	    }
+    	}
+    	&.radio{
+    	    ul{
+    	        margin:0 0 0 0;
+    	        padding: 0;
+    	        list-style: none;
+    	        border: none;
+    	        li{
+    	            margin: 0 0 0 0;
+    	            &:nth-child(even){
+    	                background: none;
+    	            }
+    	            &:last-child{
+    	                margin: 0;
+    	            }
+    	            label{
+    	                display: inline;
+                    	font-weight: normal;
+    	            }
+    	        }
+    	    }
+    	}
+    	input.form-text, textarea{
+    	    display: block;
+        	width: 50%;
+        	padding: 5px;
+        	font-size: 14px;
+        	border: 1px solid #ddd;
+        	background: #f5f5f5;
+        	.box-shadow( inset 0 1px 2px rgba(0,0,0,0.05) );
+        	.border-radius;
+    	}
+    	input.form-text:focus{
+    	    border: 1px solid #ccc;
+        	background: #fff;
+    	}
+    	textarea{
+	    	height: 150px;
+    	}
+    	select{
+    	    min-width: 25%;
+        	margin: 0;
+    	}
+    	p.form-help{
+    	    margin: 5px 0 0 0;
+        	font-size: 12px;
+        	color: #999;
+    	}
+    	input[type="submit"]{
+    	    margin: 0;
+        	padding: 8px 13px;
+        	font-size: 16px;	
+        	font-weight: bold;
+        	border: 1px solid #ccc;
+        	background: #eee;
+        	.border-radius;
+        	&:hover, &:focus{
+        	    border: 1px solid #bbb;
+            	background: #e5e5e5;
+        	}
+        	&:active{
+        	    border: 1px solid #ccc;
+            	background: #eee;
+        	}
+    	}
+    }// end fieldset
+}
+
